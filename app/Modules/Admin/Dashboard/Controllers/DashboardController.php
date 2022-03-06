@@ -16,7 +16,7 @@ class DashboardController extends Base
     public function index()
     {
         $this->title = __("admin.dashboard_title_page");
-        $this->content = view('Admin::Dashboard.index')->with([
+        $this->content  = view('Admin::Dashboard.index')->with([
             'title' => $this->title
         ])->render();
 

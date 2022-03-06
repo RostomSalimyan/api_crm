@@ -13,6 +13,7 @@ return [
 
     'modules' => [
         'Admin' => [
+            'Menu',
             'Dashboard',
             'User',
         ],

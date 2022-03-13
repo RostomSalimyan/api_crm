@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Modules\Admin\Menu\Controllers\Api;
+namespace App\Modules\Admin\Role\Controllers;
 
-use App\Modules\Admin\Menu\Models\Menu;
-use App\Services\Response\ResponseServise;
+use App\Modules\Admin\Role\Models\Role;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 
-class MenuController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +15,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return ResponseServise::sendJsonResponse(true, 200,[], [
-            'menu' => (Menu::frontMenu(Auth::user())->get())->toArray()
-        ]);
+        //
     }
 
     /**
@@ -46,10 +42,10 @@ class MenuController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
+     * @param  \App\Modules\Admin\Role\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function show(Menu $menu)
+    public function show(Role $role)
     {
         //
     }
@@ -57,10 +53,10 @@ class MenuController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
+     * @param  \App\Modules\Admin\Role\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function edit(Menu $menu)
+    public function edit(Role $role)
     {
         //
     }
@@ -69,10 +65,10 @@ class MenuController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
+     * @param  \App\Modules\Admin\Role\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Menu $menu)
+    public function update(Request $request, Role $role)
     {
         //
     }
@@ -80,10 +76,10 @@ class MenuController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
+     * @param  \App\Modules\Admin\Role\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Menu $menu)
+    public function destroy(Role $role)
     {
         //
     }

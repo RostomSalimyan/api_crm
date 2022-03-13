@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Modules\Admin\Menu\Controllers\Api;
+namespace App\Modules\Admin\Role\Controllers;
 
-use App\Modules\Admin\Menu\Models\Menu;
-use App\Services\Response\ResponseServise;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
-class MenuController extends Controller
+class PermissionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +14,11 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return ResponseServise::sendJsonResponse(true, 200,[], [
-            'menu' => (Menu::frontMenu(Auth::user())->get())->toArray()
-        ]);
+        //
     }
 
     /**
-     * Create of the resource.
+     * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -46,21 +41,21 @@ class MenuController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Menu $menu)
+    public function show($id)
     {
         //
     }
 
     /**
-     * Display the specified resource.
+     * Show the form for editing the specified resource.
      *
-     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Menu $menu)
+    public function edit($id)
     {
         //
     }
@@ -69,10 +64,10 @@ class MenuController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Menu $menu)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,10 +75,10 @@ class MenuController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Modules\Admin\Menu\Models\Menu  $menu
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Menu $menu)
+    public function destroy($id)
     {
         //
     }

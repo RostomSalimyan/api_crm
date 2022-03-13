@@ -13,18 +13,20 @@ class Menu extends Model
     const MENU_TYPE_FRONT = 'front';
     const MENU_TYPE_ADMIN = 'admin';
 
-    public function scopeFrontMenu($query, User $user)
-    {
+    ///perms
+
+
+    public function scopeFrontMenu($query, User $user) {
+
         return $query->
-                where('type', self::MENU_TYPE_FRONT)
-//                whereHas('perms', function($q) use($user) {
-//
-//                })
-            ;
+                where('type', self::MENU_TYPE_FRONT)/*->*/
+                /*whereHas('perms', function($q) use($user) {
+
+                })*/
+        ;
     }
 
-    public function scopeMenuByType($query, $type)
-    {
+    public function scopeMenuByType($query, $type) {
         return $query->where('type', $type)->orderBy('parent')->orderBy('sort_order');
     }
 }

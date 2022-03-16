@@ -14,7 +14,9 @@ class CreatePermissions extends Migration
     public function up()
     {
         Schema::create('permissions', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('alias');
+            $table->string('title');
             $table->timestamps();
         });
     }

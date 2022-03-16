@@ -16,6 +16,22 @@ class RolePolicy
      */
     public function __construct()
     {
-        //
+
+    }
+
+    public function view() {
+        return true;
+    }
+
+    public function create() {
+        return true;
+    }
+
+    public function edit() {
+        return true;
+    }
+
+    public function delete() {
+
     }
 }

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: note
- * Date: 15.11.2020
- * Time: 10:22
- */
 
 namespace App\Services\Response;
 

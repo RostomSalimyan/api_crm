@@ -33,7 +33,6 @@ class PermissionsController extends Base
         $perms = Permission::all();
         $roles = Role::all();
 
-        //dd($roles);
         $this->title = "Title Perm Index";
 
         $this->content = view('Admin::Permission.index')->
@@ -54,7 +53,7 @@ class PermissionsController extends Base
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -65,13 +64,15 @@ class PermissionsController extends Base
      */
     public function store(Request $request)
     {
+        //
         $this->authorize('create', Role::class);
 
         $this->service->save($request);
 
-        return back()->with([
-            'message' => __('Success'),
+        return  back()->with([
+            'message' => __('Success')
         ]);
+
     }
 
     /**

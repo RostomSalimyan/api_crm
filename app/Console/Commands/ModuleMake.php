@@ -51,6 +51,7 @@ class ModuleMake extends Command
      */
     public function handle()
     {
+
         if($this->option('all')) {
             $this->input->setOption('migration', true);
             $this->input->setOption('vue', true);
@@ -136,13 +137,13 @@ class ModuleMake extends Command
         }
 
         $this->updateModularConfig();
+
         $this->createRoutes($controller, $modelName);
 
 
     }
 
-    private function updateModularConfig()
-    {
+    private function updateModularConfig() {
         $group = explode('\\', $this->argument('name'))[0];
         $module = Str::studly(class_basename($this->argument('name')));
 
@@ -205,7 +206,6 @@ class ModuleMake extends Command
         }
 
         $this->updateModularConfig();
-
         $this->createApiRoutes($controller, $modelName);
     }
 
